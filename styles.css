@@ -34,7 +34,7 @@ body {
 .panelContainer {
   width: 100%;
   height: 100%;
-  padding: 10rem;
+  padding: 8rem;
 
   display: flex;
   flex-direction: row;
@@ -50,28 +50,31 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-}
 
-.panelContainer .panel--active {
-  flex-basis: 1250%;
-}
+  cursor: pointer;
 
-.panelContainer .panel {
+  /* for text */
   display: flex;
   align-items: flex-end;
 }
 
 .panelContainer .panel h4 {
-  padding: 2rem 3.5rem;
-
   font-size: 1.5rem;
   color: white;
+
+  padding: 2rem 3.5rem;
+}
+
+.panel--active {
+  flex: 1250%;
 }
 
 /* --- Mobil --- */
 
-@media (max-width: 960px) {
+@media (max-width: 760px) {
   .panelContainer {
     flex-direction: column;
+
+    padding: 4rem;
   }
 }

@@ -6,11 +6,9 @@ const panels = document.querySelectorAll(`.panel`);
 
 panels.forEach(panel => {
   panel.addEventListener(`click`, function () {
-    // decrease ALL panel sizes, hide ALL text
-    panels.forEach(panel => {
-      panel.classList.remove(`panel--active`);
-      panel.firstElementChild.classList.add(`hidden`);
-    });
+    // remove panel--active, hide ALL text
+    document.querySelector(`.panel--active`)?.classList.remove(`panel--active`);
+    panels.forEach(panel => panel.firstElementChild.classList.add(`hidden`));
 
     // increase panel size, add panel text
     panel.classList.add(`panel--active`);
