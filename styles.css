@@ -12,12 +12,15 @@
 
 html {
   font-size: 62.5%;
-  line-height: 1.5;
-  overflow-x: hidden;
 }
 
 body {
+  width: 100%;
+  height: 100vh;
+  /* overflow: auto; */
+
   font-family: 'News Cycle', sans-serif !important;
+  line-height: 1.5;
 }
 
 /* --- utilityClasses --- */
@@ -29,9 +32,8 @@ body {
 /* --- Viewport --- */
 
 .panelContainer {
-  width: 100vw;
-  height: 100vh;
-
+  width: 100%;
+  height: 100%;
   padding: 10rem;
 
   display: flex;
@@ -52,7 +54,18 @@ body {
 
 .panelContainer .panel--active {
   flex-basis: 1250%;
-  transition: 1s;
+}
+
+.panelContainer .panel {
+  display: flex;
+  align-items: flex-end;
+}
+
+.panelContainer .panel h4 {
+  padding: 2rem 3.5rem;
+
+  font-size: 1.5rem;
+  color: white;
 }
 
 /* --- Mobil --- */
